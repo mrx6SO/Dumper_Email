@@ -1,7 +1,7 @@
 # Dumper_EMAIL
 
 
-EStrutura: 
+Estrutura: 
 
 1) back.py -> função responsável por encontrar e copiar os arquivos. 
 
