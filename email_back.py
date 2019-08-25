@@ -4,16 +4,13 @@
 import smtplib
 
 import os, sys
-import re
-import shutil
-#import zipfile
 
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
 from email.MIMEBase import MIMEBase
 from email import encoders
 
-# função para mandar os arquivos copiados em uma pasta em formato .zip para o email desejado.
+# função para mandar os arquivos copiados para o email desejado.
        
 def send_to_email():
     
@@ -24,12 +21,12 @@ def send_to_email():
 
     msg['de'] = fromaddress 
     msg['para'] = toaddress
-    msg['assunto'] = "POR FAVOR NÃO MATE SUA MULHER"
+    msg['assunto'] = "any"
 
-    body = " TESTE "
+    body = " TEST "
 
     msg.attach(MIMEText(body, 'plain'))
-    fl = os.listdir(".")
+    fl = os.listdir("..")
     print ("\n") 
     full_file_name = raw_input("choose the file to send: \n")  
       
@@ -48,6 +45,6 @@ def send_to_email():
     server.login(fromaddress, "your email password")
     text = msg.as_string()
     server.sendmail(fromaddress, toaddress, text)
-    print ("\nfeito\narquivo enviado\n")
+    print ("\nDone!\n")
     server.quit()  
 
