@@ -18,6 +18,10 @@ with your defined settings,
 
 Just run:
 
+# pip install -r requirements.txt 
+
+then
+
 # chmod 775 main.py
 # python main.py
 
